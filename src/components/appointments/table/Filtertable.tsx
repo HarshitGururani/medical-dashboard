@@ -192,8 +192,8 @@ export default function Filtertable() {
         />
       </Box>
 
-      <TableContainer sx={{ maxHeight: 440 }}>
-        <Table stickyHeader aria-label="sticky table">
+      <TableContainer sx={{ maxHeight: 440, overflowX: 'auto' }}>
+        <Table stickyHeader aria-label="sticky table" sx={{ minWidth: 650 }}>
           <TableHead>
             <TableRow>
               {columns.map((column) => (

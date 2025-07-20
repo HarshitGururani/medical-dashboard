@@ -87,16 +87,16 @@ export default function Sidebar({
       x: 0,
       transition: {
         type: "spring" as const,
-        stiffness: 300,
-        damping: 30
+        stiffness: 500,
+        damping: 25
       }
     },
     exit: {
       x: '-100%',
       transition: {
         type: "spring" as const,
-        stiffness: 300,
-        damping: 30
+        stiffness: 500,
+        damping: 25
       }
     }
   };
@@ -112,10 +112,10 @@ export default function Sidebar({
       opacity: 1,
       x: 0,
       transition: {
-        delay: i * 0.03,
+        delay: i * 0.01,
         type: "spring" as const,
-        stiffness: 300,
-        damping: 30
+        stiffness: 500,
+        damping: 25
       }
     })
   };
@@ -127,8 +127,8 @@ export default function Sidebar({
       x: 0,
       transition: {
         type: "spring" as const,
-        stiffness: 300,
-        damping: 30
+        stiffness: 500,
+        damping: 25
       }
     }
   };
@@ -170,7 +170,7 @@ export default function Sidebar({
             className="p-4 border-b border-sidebar-border"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.05, type: "spring" as const, stiffness: 300, damping: 30 }}
+            transition={{ delay: 0.02, type: "spring" as const, stiffness: 500, damping: 25 }}
           >
             <div className='flex justify-between items-center'> 
               <div className="flex items-center gap-3">
@@ -245,7 +245,7 @@ export default function Sidebar({
                           initial={{ opacity: 0, x: 10 }}
                           animate={{ opacity: 1, x: 0 }}
                           exit={{ opacity: 0, x: 10 }}
-                          transition={{ type: "spring" as const, stiffness: 300, damping: 30 }}
+                          transition={{ type: "spring" as const, stiffness: 500, damping: 25 }}
                         >
                           <FiChevronRight className="w-4 h-4" />
                         </motion.div>
@@ -268,7 +268,7 @@ export default function Sidebar({
       className="hidden md:flex h-screen bg-sidebar border-sidebar-border border-r-2"
       variants={desktopSidebarVariants}
       animate={isCollapsed ? "collapsed" : "expanded"}
-      transition={{ type: "spring" as const, stiffness: 300, damping: 30 }}
+      transition={{ type: "spring" as const, stiffness: 500, damping: 25 }}
     >
       <div className="flex flex-col w-full">
         {/* Desktop Header */}
@@ -371,13 +371,13 @@ export default function Sidebar({
                   </div>
                   <AnimatePresence mode="wait">
                     {isActive(item.href) && !isCollapsed && (
-                      <motion.div
-                        key={`chevron-${item.href}`}
-                        initial={{ opacity: 0, x: 10 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        exit={{ opacity: 0, x: 10 }}
-                        transition={{ type: "spring" as const, stiffness: 300, damping: 30 }}
-                      >
+                                              <motion.div
+                          key={`chevron-${item.href}`}
+                          initial={{ opacity: 0, x: 10 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          exit={{ opacity: 0, x: 10 }}
+                          transition={{ type: "spring" as const, stiffness: 500, damping: 25 }}
+                        >
                         <FiChevronRight className="w-4 h-4" />
                       </motion.div>
                     )}
@@ -386,10 +386,10 @@ export default function Sidebar({
                   {/* Tooltip for collapsed state */}
                   {isCollapsed && (
                     <motion.div 
-                      className="absolute left-full ml-2 px-2 py-1 bg-gray-900 text-white text-sm rounded pointer-events-none whitespace-nowrap z-50"
-                      initial={{ opacity: 0, scale: 0.8 }}
-                      whileHover={{ opacity: 1, scale: 1 }}
-                      transition={{ type: "spring" as const, stiffness: 300, damping: 30 }}
+                                        className="absolute left-full ml-2 px-2 py-1 bg-gray-900 text-white text-sm rounded pointer-events-none whitespace-nowrap z-50"
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  whileHover={{ opacity: 1, scale: 1 }}
+                  transition={{ type: "spring" as const, stiffness: 500, damping: 25 }}
                     >
                       {item.label}
                     </motion.div>
@@ -409,7 +409,7 @@ export default function Sidebar({
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 20 }}
-              transition={{ type: "spring" as const, stiffness: 300, damping: 30 }}
+              transition={{ type: "spring" as const, stiffness: 500, damping: 25 }}
             >
               <button 
                 className="w-full p-3 hover:bg-sidebar-accent rounded-xl group relative"
@@ -421,7 +421,7 @@ export default function Sidebar({
                   className="absolute left-full ml-2 px-2 py-1 bg-gray-900 text-white text-sm rounded pointer-events-none whitespace-nowrap z-50"
                   initial={{ opacity: 0, scale: 0.8 }}
                   whileHover={{ opacity: 1, scale: 1 }}
-                  transition={{ type: "spring" as const, stiffness: 300, damping: 30 }}
+                  transition={{ type: "spring" as const, stiffness: 500, damping: 25 }}
                 >
                   Expand
                 </motion.div>

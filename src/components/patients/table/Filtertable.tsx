@@ -155,15 +155,26 @@ export default function Filtertable() {
           onChange={handleStatusFilterChange}
           aria-label="status filter tabs"
           className="bg-card"
+          variant="scrollable"
+          scrollButtons="auto"
+          allowScrollButtonsMobile
           sx={{
             '& .MuiTab-root': {
               color: 'var(--muted-foreground)',
+              minWidth: 'auto',
+              padding: '12px 16px',
               '&.Mui-selected': {
                 color: 'var(--primary)',
               },
             },
             '& .MuiTabs-indicator': {
               backgroundColor: 'var(--primary)',
+            },
+            '& .MuiTabs-scrollButtons': {
+              color: 'var(--muted-foreground)',
+              '&.Mui-disabled': {
+                opacity: 0.3,
+              },
             },
           }}
         >
@@ -174,8 +185,8 @@ export default function Filtertable() {
         </Tabs>
       </Box>
 
-      <TableContainer sx={{ maxHeight: 600 }}>
-        <Table stickyHeader aria-label="sticky table">
+      <TableContainer sx={{ maxHeight: 600, overflowX: 'auto' }}>
+        <Table stickyHeader aria-label="sticky table" sx={{ minWidth: 650 }}>
           <TableHead>
             <TableRow>
               {columns.map((column) => (
