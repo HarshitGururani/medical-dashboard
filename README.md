@@ -131,34 +131,36 @@ medical-dashboard/
 
 ## 📱 Screenshots
 
-### For Screenshots, please include:
+### Dashboard Overview
+![Dashboard Overview](/screenshots/dashboard.png)
+*Main dashboard showing metric cards, charts, and recent data*
 
-1. **Dashboard Overview** - Main dashboard showing metric cards, charts, and recent data
-2. **Patients Page** - Patient management interface with filtering and search
-3. **Appointments Page** - Appointment scheduling and management view
-4. **Mobile Responsive** - Dashboard on mobile/tablet devices
-5. **Dark/Light Theme** - Both theme variations
+### Patients Page
+![Patients Page](/screenshots/patients.png)
+*Patient management interface with filtering and search*
 
-**Recommended screenshot specifications:**
+### Appointments Page
+![Appointments Page](/screenshots/appointments.png)
+*Appointment scheduling and management view*
+
+### Sidebar Navigation
+![Sidebar Closed](/screenshots/sidebarclosed.png)
+*Responsive sidebar navigation with collapsible functionality*
+
+### Dark Mode Theme
+![Dark Mode](/screenshots/darkmode.png)
+*Dark theme variation of the medical dashboard*
+
+**Screenshot specifications:**
 - Resolution: 1920x1080 or higher
 - Format: PNG or JPG
 - Include both desktop and mobile views
 - Show different pages and features
 - Capture the theme toggle functionality
 
-## 🔧 Configuration
-
-### Environment Variables
-
-Create a `.env.local` file in the root directory:
-
-```env
 # API Configuration
 NEXT_PUBLIC_API_URL=https://json-server-hpku.onrender.com
 
-# Optional: Analytics
-NEXT_PUBLIC_GA_ID=your-google-analytics-id
-```
 
 ### Tailwind Configuration
 
@@ -168,53 +170,3 @@ The project uses Tailwind CSS v4 with custom configuration for:
 - Spacing and layout utilities
 - Custom component classes
 
-## 🚀 Deployment
-
-### Vercel (Recommended)
-
-1. Push your code to GitHub
-2. Connect your repository to Vercel
-3. Deploy automatically on push
-
-### Other Platforms
-
-The application can be deployed to any platform that supports Next.js:
-- Netlify
-- Railway
-- DigitalOcean App Platform
-- AWS Amplify
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🆘 Support
-
-If you encounter any issues or have questions:
-
-1. Check the [Issues](../../issues) page
-2. Create a new issue with detailed information
-3. Include steps to reproduce the problem
-
-## 🔮 Roadmap
-
-- [ ] Lab Results Management
-- [ ] Advanced Analytics Dashboard
-- [ ] User Authentication & Authorization
-- [ ] Real-time Notifications
-- [ ] Export/Import Functionality
-- [ ] Multi-language Support
-- [ ] Advanced Search & Filtering
-- [ ] API Documentation
-
----
-
-Built with ❤️ using Next.js and modern web technologies.
