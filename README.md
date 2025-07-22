@@ -121,14 +121,6 @@ medical-dashboard/
 - **Context Providers**: Theme and sidebar state management
 - **API Integration**: RESTful API calls to external medical data service
 
-## 🎨 UI/UX Features
-
-- **Responsive Design**: Mobile-first approach with breakpoint-specific layouts
-- **Smooth Animations**: Framer Motion for page transitions and micro-interactions
-- **Accessibility**: ARIA labels and keyboard navigation support
-- **Theme System**: Seamless dark/light mode switching
-- **Loading States**: Skeleton components for better user experience
-
 ## 📱 Screenshots
 
 ### Dashboard Overview
