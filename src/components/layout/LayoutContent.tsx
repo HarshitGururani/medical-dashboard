@@ -31,7 +31,7 @@ export default function LayoutContent({
         </div>
         
         {/* Scrollable Content */}
-        <div className="flex-1 p-6  pt-5">
+        <div className="flex-1 p-6 pt-5 glow-scrollbar">
           {children}
         </div>
       </main>
